@@ -1,2 +1,2 @@
 # Ussi_m2ng
-Ussi mäng, kus uss sööb õunu ja kasvab pikemaks.
+Ussi mäng, kus uss sööb toitu ja kasvab pikemaks.
