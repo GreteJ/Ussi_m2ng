@@ -62,3 +62,23 @@ class Uss():
     
     def peaKoordinaat(self):
         return self.body
+
+    #toit, selle tekkimine ja asukoht
+class toit():
+    def __init__(self):
+        self.position = [random.randrange(1,50)*10,random.randrange(1,50)*10]
+        self.isFoodOnScreen = True
+        
+    def toiduKoordinaat(self):
+        return self.position
+
+#toit tekib suvalistesse kohtadesse
+    def toitTekib(self):
+        if self.isFoodOnScreen == False:
+            self.position = [random.randrange(1,50)*10,random.randrange(1,50)*10]
+            self.isFoodOnScreen == True
+            
+#loob uue toidu kuhugi punkti         
+    def looToit(self, x, y):
+        self.position = [x,y]
+        
