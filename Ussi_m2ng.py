@@ -25,3 +25,23 @@ class Uss():
         if suund=="DOWN" and not self.direction=="UP":
             self.direction = "DOWN"
  
+#liikumine suuna järgi
+    def liikumine(self,foodPos):
+        if self.direction== "RIGHT":
+            self.position[0] += 10
+        if self.direction== "LEFT":
+            self.position[0] -= 10
+        if self.direction== "UP":
+            self.position[1] -= 10
+        if self.direction== "DOWN":
+            self.position[1] += 10
+        self.body.insert(0,list(self.position))
+        if self.position == foodPos:
+            return 1
+        else:
+            self.body.pop()
+            return 0
+ 
+#keha juurde tekkimine
+    def kehaTulek(self):
+        return self.body
