@@ -117,3 +117,11 @@ while True:
             uss.muudaSuunda("DOWN")
         elif pressed[pygame.K_ESCAPE] == 1:
             gameOver()
+
+#kui uss sööb toidu, siis toit kaob ja saab punkti (skoori süsteem)
+    foodPos = toit.toiduKoordinaat()
+    if(uss.liikumine(foodPos)==1):
+        score+=1
+        xx = random.randrange(1,50)*10
+        yy = random.randrange(1,50)*10
+        toit.looToit(xx, yy)
