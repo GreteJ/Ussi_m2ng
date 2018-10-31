@@ -82,3 +82,38 @@ class toit():
     def looToit(self, x, y):
         self.position = [x,y]
         
+        
+#mängu suurus, nimi
+window = pg.display.set_mode((600,600))
+pg.display.set_caption("Ussi_mäng")
+fps = pg.time.Clock()
+
+score = 0
+
+uss = Uss()
+toit = toit()
+
+#mäng lõppeb, läheb kinni
+def over():
+    pg.quit()
+    sys.exit()
+
+#mäng algab
+while True:
+    taust = pygame.image.load("taust.png")
+    window.blit(taust, (0, 0))
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            gameOver()
+
+        pressed = pygame.key.get_pressed()
+        if pressed[pygame.K_RIGHT] == 1:
+            uss.muudaSuunda("RIGHT")
+        elif pressed[pygame.K_LEFT] == 1:
+            uss.muudaSuunda("LEFT")
+        elif pressed[pygame.K_UP] == 1:
+            uss.muudaSuunda("UP")
+        elif pressed[pygame.K_DOWN] == 1:
+            uss.muudaSuunda("DOWN")
+        elif pressed[pygame.K_ESCAPE] == 1:
+            gameOver()
