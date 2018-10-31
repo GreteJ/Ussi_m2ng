@@ -45,3 +45,20 @@ class Uss():
 #keha juurde tekkimine
     def kehaTulek(self):
         return self.body
+
+#kui uss põrkub enda või seinaga saab surma
+    def porkumine(self):
+        if self.position[0] > 590 or self.position[0]< 0:
+            return 1
+        elif self.position[1] > 590 or self.position[1]< 0:
+            return 1
+        for bodyPart in self.body[1:]:
+            if self.position == bodyPart:
+                return 1
+        return 0
+    
+    def peaKoordinaat(self):
+        return self.position
+    
+    def peaKoordinaat(self):
+        return self.body
