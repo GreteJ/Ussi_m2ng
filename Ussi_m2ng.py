@@ -125,3 +125,13 @@ while True:
         xx = random.randrange(1,50)*10
         yy = random.randrange(1,50)*10
         toit.looToit(xx, yy)
+        
+    for pos in uss.kehaTulek():
+        pg.draw.rect(window,pg.Color(255,255,0),pg.Rect(pos[0],pos[1],10,10))
+    pg.draw.rect(window,pg.Color(255,255,255),pg.Rect(foodPos[0],foodPos[1],10,10))
+    if(uss.porkumine()==1):
+        over()
+    pg.display.set_caption("Uss | Score : "+ str(score) )
+    pg.display.flip()
+    fps.tick(24)
+
