@@ -12,6 +12,7 @@ class Uss():
     def __init__(self):
         self.position = [100,50]
         self.body = [[100,50],[90,50],[80,50]]
+<<<<<<< HEAD
         self.direction = "RIGHT"
 
 #vajutades neid klahve muudab uss suunda        
@@ -24,3 +25,6 @@ class Uss():
             self.direction = "UP"
         if suund=="DOWN" and not self.direction=="UP":
             self.direction = "DOWN"        
+=======
+        self.direction = "RIGHT"
+>>>>>>> parent of 9b6f031... Update Ussi_m2ng.py
